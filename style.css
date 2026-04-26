@@ -1,53 +1,82 @@
+/* ===== BASE ===== */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f7fa;
-    color: #333;
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f7fafc;
+  color: #2d3748;
+  line-height: 1.6;
 }
 
-header {
-    background: #2a9d8f;
-    padding: 20px;
-    color: white;
-    text-align: center;
-}
-
+/* ===== NAVBAR ===== */
 nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    background: #264653;
-    padding: 10px;
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+  text-decoration: none;
+  color: #2d3748;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: 0.3s;
 }
 
 nav a:hover {
-    color: #e9c46a;
+  background: #e6fffa;
 }
 
+/* ===== LAYOUT ===== */
 .container {
-    padding: 40px;
-    max-width: 1000px;
-    margin: auto;
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
 }
 
+/* ===== CARDS ===== */
 .card {
-    background: white;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: white;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
 }
 
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* ===== HEADERS ===== */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #e6fffa, #f7fafc);
+}
+
+/* ===== ANIMATION ===== */
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== FOOTER ===== */
 footer {
-    text-align: center;
-    padding: 20px;
-    background: #264653;
-    color: white;
-    margin-top: 40px;
+  text-align: center;
+  padding: 20px;
+  color: #718096;
 }
